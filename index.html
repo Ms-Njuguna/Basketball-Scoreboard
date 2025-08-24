@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <title>Basketball Scoreboard</title>
+      <style>
+            @keyframes slideUp {
+             0%   { transform: translateY(0); opacity: 1; }
+             100% { transform: translateY(-100%); opacity: 0; }
+            }
+            @keyframes slideIn {
+              0%   { transform: translateY(100%); opacity: 0; }
+              100% { transform: translateY(0); opacity: 1; }
+            }
+            .slide-up { animation: slideUp 0.3s forwards; }
+            .slide-in { animation: slideIn 0.3s forwards; }
+        </style>
+  </head>
+  <body>
+    <main>
+      <section class="w-1/3 bg-sky-950 flex mx-auto mt-32 p-8 justify-around rounded-lg">
+        
+        <!-- HOME -->
+        <div class="flex flex-col items-center">
+          <h3 class="text-5xl uppercase font-mono font-bold text-white mb-6">
+            home
+          </h3>
+          <div class="bg-black rounded-lg w-36 h-36 flex items-center justify-center">
+            <span id="home-score" class="text-5xl text-[#ff4b4b] flex gap-1" style="font-family: 'Seven Segment'">00</span>
+          </div>
+          <div class="flex gap-2 my-8">
+            <button class="bg-sky-100 w-1/3 rounded-lg p-2 bg-opacity-80">+ 1</button>
+            <button class="bg-sky-100 w-1/3 rounded-lg p-2 bg-opacity-80">+ 3</button>
+            <button class="bg-sky-100 w-1/3 rounded-lg p-2 bg-opacity-80">+ 5</button>
+          </div>
+        </div>
+
+        <!-- GUEST -->
+        <div class="flex flex-col items-center">
+          <h3 class="text-5xl uppercase font-mono font-bold text-white mb-6">
+            guest
+          </h3>
+          <div class="bg-black rounded-lg w-36 h-36 flex items-center justify-center">
+            <span id="guest-score" class="text-5xl text-[#ff4b4b] flex gap-1" style="font-family: 'Seven Segment'">00</span>
+          </div>
+          <div class="flex gap-2 my-8">
+            <button class="bg-sky-100 w-1/3 rounded-lg p-2 bg-opacity-80">+ 1</button>
+            <button class="bg-sky-100 w-1/3 rounded-lg p-2 bg-opacity-80">+ 3</button>
+            <button class="bg-sky-100 w-1/3 rounded-lg p-2 bg-opacity-80">+ 5</button>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </body>
+</html>
